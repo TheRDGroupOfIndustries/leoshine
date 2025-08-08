@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+
+footer a {
+   color: aliceblue;
+   text-decoration: none; 
+}
