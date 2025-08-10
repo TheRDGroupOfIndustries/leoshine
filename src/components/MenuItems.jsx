@@ -64,8 +64,8 @@ const MenuItems = () => {
     }, [timeoutId, burnersTimeoutId]);
 
     return (
-        <nav>
-            <ul className="space-y-4">
+        <nav className=''>
+            <ul className="space-y-4 flex justify-center gap-8 pt-4">
                 <li>
                     <Link to="/" className="hover:text-blue-400">Home</Link>
                 </li>

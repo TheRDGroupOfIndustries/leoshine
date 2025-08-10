@@ -1,0 +1,109 @@
+/* testimonials.css */
+
+/* Section */
+.testimonials-section {
+  background: #fff;
+}
+
+/* Slider viewport: hide overflow and provide padding for nav overlap */
+.slider-viewport {
+  overflow: hidden;
+  padding: 1rem 2rem;
+}
+
+/* Track is a flex container; each card width is computed inline via style in component */
+.slider-track {
+  transition: transform 0.5s ease;
+  gap: 1rem;
+}
+
+/* Card */
+.testimonial-card {
+  box-sizing: border-box;
+}
+
+/* inner card styling */
+.testimonial-card .bg-light {
+  background: #eee !important;
+}
+
+/* read more */
+.read-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-decoration: none;
+}
+
+/* avatar */
+.avatar {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* circular nav buttons */
+.circle-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  z-index: 10;
+}
+
+/* left and right positions */
+.circle-nav.left {
+  left: 0.25rem;
+}
+.circle-nav.right {
+  right: 0.25rem;
+}
+
+/* hide focus outline but keep accessible focus-visible */
+.circle-nav:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0,123,255,0.12);
+}
+
+/* star row spacing */
+.star-row svg {
+  vertical-align: middle;
+}
+
+/* indicators */
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0 4px;
+}
+.indicator.active {
+  background: #222;
+  border: none;
+  width: 28px;
+  height: 6px;
+  border-radius: 10px;
+}
+
+/* Responsive tweaks: we compute slides differently in JS, but better spacing across sizes */
+@media (min-width: 992px) {
+  /* show 3 per view look and card sizing is handled dynamically */
+  .slider-viewport {
+    padding: 2rem 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .circle-nav.left { left: 0.5rem; }
+  .circle-nav.right { right: 0.5rem; }
+  .slider-viewport { padding: 0.5rem 1rem; }
+  .testimonial-card .bg-light { padding: 1rem; }
+}
