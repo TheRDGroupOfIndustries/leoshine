@@ -12,6 +12,8 @@ import ExploreBlogs from './ExploreBlogs';
 import Consultation from './Consultation';
 import MostViewed from './MostViewed'
 import Footer from '../components/Footer';
+import Video from '../components/Video';
+import VideoGallery from '../components/VideoGallery';
 
 const HomePage = () => {
   return (
@@ -22,6 +24,8 @@ const HomePage = () => {
       <TopCategories />
       <BestsellerPage />
       <NewArrivalsPage/>
+      <Video/>
+      <VideoGallery/>
       <InfluencersChoice/>
       <Customers/>
       <ExploreBlogs/>
