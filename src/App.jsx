@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import CartDrawer from './components/CartDrawer';
+import BlogDetail from './components/BlogDetail';
 
 const App = () => {
   return (
