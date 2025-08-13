@@ -21,7 +21,7 @@ const SearchBar = () => {
         LEOSHINE
       </div>
 
-      <div className="relative flex items-center">
+      <div className="relative flex items-center flex-1 max-w-full">
         <button
           className="text-2xl text-gray-700 md:hidden"
           onClick={() => setIsSearchExpanded(!isSearchExpanded)}
@@ -32,10 +32,10 @@ const SearchBar = () => {
           <input
             type="text"
             placeholder="Search on LEOSHINE"
-            className="absolute left-0 top-full mt-2 w-full max-w-xs px-4 py-2 text-sm outline-none border rounded-md md:hidden"
+            className="absolute left-0 top-full mt-9 bg-black text-white w-full max-w-xs px-4 py-2 text-sm outline-none border rounded-md md:hidden"
           />
         )}
-        <div className="hidden md:flex w-full max-w-xs border rounded-md overflow-hidden">
+        <div className="hidden md:flex w-full  border rounded-md overflow-hidden">
           <input
             type="text"
             placeholder="Search on LEOSHINE"

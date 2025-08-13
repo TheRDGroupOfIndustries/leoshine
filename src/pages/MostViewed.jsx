@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { newArrievels } from "../data/newArrievels";
+import { mostViewed } from "../data/MostViwed";
 import ProductCard from "../components/ProductCard";
 
-const NewArrivalsPage = () => {
+const MostViwed = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
 
-  const totalPages = Math.ceil(newArrievels.length / itemsPerPage);
-  const currentItems = newArrievels.slice(
+  const totalPages = Math.ceil(mostViewed.length / itemsPerPage);
+  const currentItems =mostViewed.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
@@ -15,7 +15,7 @@ const NewArrivalsPage = () => {
   return (
     <div className="w-full px-4 md:px-12 py-8 bg-gray-50">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold text-gray-900">New Arrivals</h1>
+        <h1 className="text-2xl font-bold text-gray-900">Most Viewed</h1>
         <button className="text-sm text-red-500 font-semibold hover:underline">VIEW ALL</button>
       </div>
 
@@ -48,4 +48,4 @@ const NewArrivalsPage = () => {
   );
 };
 
-export default NewArrivalsPage;
+export default MostViwed;

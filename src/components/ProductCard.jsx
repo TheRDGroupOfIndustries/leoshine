@@ -20,9 +20,9 @@ const ProductCard = ({ product }) => {
   )}`;
 
   return (
-    <div className="relative bg-white border rounded-lg shadow-md p-4 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 w-full">
+    <div className="relative bg-white border border-gray-400 rounded-lg shadow-md p-4 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 w-full">
     
-      <div className="absolute top-2 left-2 bg-black text-white text-[10px] px-2 py-1 rounded-full uppercase tracking-wide z-10">
+      <div className="absolute top-0 left-0 bg-black text-white text-[10px] px-2 py-1 rounded uppercase tracking-wide z-10">
         Bestseller
       </div>
 

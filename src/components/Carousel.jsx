@@ -5,7 +5,7 @@ import image1 from "../assets/carousel1.webp";
 import image2 from "../assets/carousel2.webp";
 import image3 from "../assets/carousel3.webp";
 import image4 from "../assets/carousel4.webp";
-import ImageGallery from "./ImageGallery";
+
 
 const images = [image1, image2, image3, image4];
 
@@ -122,7 +122,7 @@ const Carousel = () => {
           Discover our latest range of premium kitchen appliances designed for modern homes.
         </p>
       </div>
-      <ImageGallery/>
+   
     </div>
   );
 };

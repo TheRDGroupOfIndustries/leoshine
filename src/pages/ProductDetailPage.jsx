@@ -1,13 +1,17 @@
-// File: src/pages/ProductDetailPage.jsx
+// Updated src/pages/ProductDetailPage.jsx (to handle new arrivals data as well)
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { bestsellers } from "../data/bestsellersData";
+import { newArrivals } from "../data/newArrivalsData"; // Add this import
 import Header from "../components/Header";
 import { useCart } from "../context/CartContext";
+
 const ProductDetailPage = () => {
     const { addToCart } = useCart();
     const { id } = useParams();
-    const product = bestsellers.find((item) => item._id === id);
+    // Combine both arrays to find the product
+    const allProducts = [...bestsellers, ...newArrivals];
+    const product = allProducts.find((item) => item._id === id);
     const [quantity, setQuantity] = useState(1);
     const [showMoreInfo, setShowMoreInfo] = useState(false);
     const [showWarranty, setShowWarranty] = useState(false);
@@ -77,13 +81,11 @@ const ProductDetailPage = () => {
                             M.R.P: <s>₹{product.originalPrice.toFixed(2)}</s>
                         </p>
 
-
                         <div className="flex items-center gap-2 mb-4">
                             <button onClick={decrement} className="px-3 py-1 border">-</button>
                             <span>{quantity}</span>
                             <button onClick={increment} className="px-3 py-1 border">+</button>
                         </div>
-
 
                         <div className="flex gap-4 mb-6">
                             <button
@@ -96,7 +98,6 @@ const ProductDetailPage = () => {
                         </div>
                     </div>
                 </div>
-
 
                 <div className="mt-8 space-y-4">
                     <div>
@@ -145,7 +146,6 @@ const ProductDetailPage = () => {
                         )}
                     </div>
                 </div>
-
 
                 <div className="mt-10 border p-6 rounded-lg">
                     <h2 className="text-xl font-semibold mb-4">Ratings and Reviews</h2>

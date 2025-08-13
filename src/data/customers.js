@@ -1,0 +1,38 @@
+export const CustomersData=[
+    {
+        id:1,
+        name:"Abhishek Tiwari",
+        address:"Ghaziabad",
+        rating:4.5,
+        review:"Great Service and support!",
+        description: "I have been using their products for 6 months and they are absolutely worth it.",
+        image: "https://randomuser.me/api/portraits/men/32.jpg",
+    },
+    {
+        id:2,
+        name:"Abhishek Tiwari",
+        address:"Ghaziabad",
+        rating:4.5,
+        review:"Great Service and support!",
+        description: "I have been using their products for 6 months and they are absolutely worth it.",
+        image: "https://randomuser.me/api/portraits/men/32.jpg",
+    },
+    {
+        id:3,
+        name:"Abhishek Tiwari",
+        address:"Ghaziabad",
+        rating:4,
+        review:"Great Service and support!",
+        description: "I have been using their products for 6 months and they are absolutely worth it.",
+        image: "https://randomuser.me/api/portraits/men/32.jpg",
+    },
+    {
+        id:4,
+        name:"Abhishek Tiwari",
+        address:"Ghaziabad",
+        rating:5,
+        review:"Great Service and support!",
+        description: "I have been using their products for 6 months and they are absolutely worth it.",
+        image: "https://randomuser.me/api/portraits/men/32.jpg",
+    },
+]
